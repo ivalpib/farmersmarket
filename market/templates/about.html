@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<header>
+<div class="about-area img-fluid ">
+    <div class="container">
+        {% include 'navbar.html' %}
+        <div class="container banner-part">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="our-products">
+                        <h1 style="margin-top:100px ;">About us</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+<section class="About-us mt-5 p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-sm-12 col-md-6 p-3">
+                <h1>About Us</h1>
+                <p>Farmers Markets Nepal is an online order & delivery service by Cloud Foods Pvt Ltd. bringing you your favourite fresh bakery and farmers food items delivered directly to your door in Kathmandu.</p>
+            </div>
+            <div class="col-lg-4 col-sm-12 col-md-6 p-5">
+                <img src="/assest//about-logo.jpg" class="img-fluid" height="300px" width="400px" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class='customers-saying'>
+    <div class="container cust-part ">
+        <p>Testimonials</p>
+        <h1>our customer's say</h1>
+    </div>
+</section>
+
+{% endblock %}

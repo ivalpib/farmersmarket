@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<header>
+<div class="product-area img-fluid ">
+    <div class="container">
+     {% include 'navbar.html' %}
+        <div class="container banner-part">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="our-products">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+<div class="container pt-2 pb-2">
+	<div class="row">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+
+			<form action="{% url 'login' %}" method="POST">
+				{% csrf_token %} 
+				<input type="text" name="username" placeholder="Username"> </br>
+				<input type="password" name="password" placeholder="Password"> </br>
+				<input type="submit" vlaue="submit">
+			</form>
+
+			<div  >
+
+				{% for message in messages%}
+				
+				<p class="text-danger"> {{message}} </p>
+
+				{% endfor %}
+
+			</div>
+		</div>
+		<div class="col-md-4">
+			
+		</div>
+	</div>
+</div>
+{% endblock %}

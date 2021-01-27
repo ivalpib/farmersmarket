@@ -1,0 +1,635 @@
+.head{
+    display: flex;
+}
+.header-area{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(/assest/farmer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height:500px;
+    color: white;
+}
+
+.logopart{
+    margin-top: 5px;
+}
+.navbar{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.navbar a{
+    color: white !important;
+}
+.navbar-toggler-icon{
+    background-color: rgb(165, 157, 157)!important;
+}
+.navbar-nav{
+    margin-left: auto;
+}
+.search-box{
+    border-radius: 10%;
+    height: 25px;
+}
+.login-signup-maindiv{
+    margin-top: 5px;
+}
+.login-signup ul{
+    display: flex;
+    list-style: none;
+}
+.login-signup li{
+    margin-left: 8px;
+}
+.login-signup a{
+    color: white;
+    text-decoration: none;
+}
+/* flying santa css */
+.container-santa{
+    height: 480px;
+    width: 350px;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  svg{
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  .plane{
+    position: relative;
+    -webkit-animation: float 3s infinite;
+            animation: float 3s infinite;
+  }
+  @-webkit-keyframes float{
+    50%{
+      -webkit-transform: translateY(25px);
+              transform: translateY(25px);
+    }
+  }
+  @keyframes float{
+    50%{
+      -webkit-transform: translateY(25px);
+              transform: translateY(25px);
+    }
+  }
+  .hand{
+    -webkit-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+            transform: rotate(10deg);
+    -webkit-animation: wave 1.5s infinite;
+            animation: wave 1.5s infinite;
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center; 
+  }
+  .blade{
+    -webkit-animation:spin 1s infinite linear;
+            animation:spin 1s infinite linear;
+    -webkit-transform-origin: 50% 54%;
+        -ms-transform-origin: 50% 54%;
+            transform-origin: 50% 54%;
+  }
+  @-webkit-keyframes spin{
+    100%{
+      -webkit-transform: rotateX(360deg);
+              transform: rotateX(360deg);
+    }
+  }
+  @keyframes spin{
+    100%{
+      -webkit-transform: rotateX(360deg);
+              transform: rotateX(360deg);
+    }
+  }
+  @-webkit-keyframes wave{
+    50%{
+      -webkit-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+    }
+  }
+  @keyframes wave{
+    50%{
+      -webkit-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+    }
+  }
+ 
+
+/* flying santa css */
+.banner-part{
+    margin-top: 20px;
+}
+
+@media all and (max-width: 500px) {
+    .slider_text{
+        background:rgb(116, 163, 116) !important;
+        position: absolute;
+        top:  5%;
+        width: 40%;
+    }
+  }
+
+@media all and (max-width: 500px) {
+    .navbar-nav{
+        background:gray;
+        border: 1px solid black;
+        color: white;
+        position: relative;
+        z-index: 10;
+        opacity: 0.9;
+        padding: 10px;
+        border-radius: 10px;
+    }
+  }
+  @media all and (max-width: 500px) {
+    .slider_text h3{
+        font-family: "Philosopher", sans-serif;
+        margin-bottom: 10px !important;
+        text-transform: capitalize;
+        letter-spacing:  1px !important;
+        font-weight: 100 !important;
+        line-height: 30px !important; 
+    }
+  }
+
+.slider_text{
+    width: 40% !important;
+    background:#89b0859c;
+    margin: 30px;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 5%;
+}
+
+.slider_text h3{
+    font-family: "Philosopher", sans-serif;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    letter-spacing:  2px;
+    font-weight: 700;
+    line-height: 50px;     
+}
+.veiwMenus{
+    padding: 10px 20px;
+    border-radius: 5%;
+    background-color: rgb(53, 107, 53);
+    color: white;
+    border: 1px solid black;
+    font-weight: 700;
+}
+.veiwMenus:hover{
+    background-color:rgb(12, 12, 56);
+    color: white;
+}
+.Product{
+    padding: 20px 0px;
+}
+a{
+    font-size: larger;
+    font-weight: 600;
+}
+.latest-product{
+    margin-bottom: 20px;
+    padding-top:60px;
+    background: rgb(179, 175, 175);
+
+    
+}
+.latestProduct-title{
+    text-align: center;
+}
+.Product{
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+   
+}
+.product-img{
+    height: 200px;
+    width: 300px;
+}
+.Product p{
+    width: 250px;
+}
+.price-btn-parent{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(37, 95, 37);
+}
+.product-card{
+    color: rgb(18, 99, 18);
+    font-weight: 600;
+}
+.product-card:hover{
+    color: white;
+}
+.Add-btn{
+    border: 0.5px solid gray;
+    width: 100px;
+    height: 40px;
+    background:transparent;
+    border: 1px solid gray;
+    border-radius: 30px;
+}
+.Add-btn:hover{
+    background-color: lightgreen;
+    color: white;
+}
+
+#scroll-bar{
+    height: 40px;
+    width: 270px;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(107, 156, 107); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+ 
+
+.price{
+    font-size: x-large;
+    font-weight: 600;
+}
+.farmersMarket-img{
+    margin-top: 60px;
+}
+.veg-img{
+    font-size: x-large;
+    font-weight: 600;
+}
+.veg-img i{
+    height: 100px;
+}
+.farmersMarket-nepal{
+    margin-bottom: 70px;
+}
+.popular-products{
+    text-align: center; 
+    font-weight:  700;
+    padding: 20px;
+}
+.popular-product{
+    background: whitesmoke;
+}
+.work-section{
+    background: rgb(221, 210, 180);
+    padding-bottom: 50px;
+}
+.work-part{
+    padding: 30px 0px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.work-card{
+    margin-right: 30px;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(37, 71, 37);
+    position: relative;
+}
+.work-card:hover .step-count {
+    color: red;
+    position: absolute;
+    top: 0 ;
+    left: 70% ;
+    color: rgb(121, 224, 62);
+    z-index: 1;
+    opacity: 1; 
+}
+.work-card:hover .main-title{
+    position: absolute;
+    top: 10%;
+    left: -5%;
+    color: rgb(132, 218, 82);
+    transition-duration: 2s;
+    opacity: 2;
+    z-index: 5;
+}
+.work-card:hover .figure-part{
+    opacity: 0.9;
+}
+.work-card:hover .sub-title{
+    width: 320px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(5%,30%);
+    color: rgb(94, 241, 35);
+    transition-duration: 2s;
+    opacity: 2;
+    z-index: 5;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.figure-part{
+    width: 300px;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    z-index:2;
+    opacity: 0.5;
+    padding: 20px;
+}
+
+.step-count{
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    color: whitesmoke;
+    z-index: 1;
+    opacity: 0.4;
+    transition-duration: 3s;
+}
+
+
+.main-title{
+    position: absolute;
+    top: 30%;
+    left: -5%;
+    transform: translate(50%,50%);
+    color: whitesmoke;
+    margin-bottom: 0px;
+}
+
+.sub-title{
+    width: 320px;
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    transform: translate(5%,30%);
+    color: whitesmoke;
+}
+
+.hightlights-image{
+    margin: 0px;
+    padding: 0px;
+}
+.icon-part a{
+    margin-right: 10px;
+    color: whitesmoke;
+}
+.icon-part{
+    list-style: none;
+}
+
+.social-media-icon ul{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer{
+    background:rgb(82, 161, 82);
+    padding: 40px;
+    color: whitesmoke;
+}
+.hightled-images-products{
+    background: rgb(238, 233, 233);
+}
+.highlighted-img{
+    padding: 40px;
+}
+.useful-link{
+    list-style: none;
+}
+.useful-link a{
+    text-decoration: none;
+    color:whitesmoke;
+    font-size: large;
+    font-weight: 400;
+}
+.useful-link li{
+    padding-top: 10px;
+}
+.useful-link a:hover{
+    color: rgb(119, 211, 119);
+}
+.useful-link-ul{
+    margin-top: 30px;
+}
+.subs-search-box{
+    width: 90%;
+    border-radius:30px;
+    margin-top: 10px;
+    position: relative;
+}
+.subscribe-btn{
+    border-radius: 30px;
+    width: 100px;
+    height: 35px;
+    background-color:rgb(65, 134, 65);
+    color: whitesmoke;
+    position: absolute;
+    top: 8%;
+    left: 62%;
+}
+.search-box-input{
+    border-radius: 30px!important;
+    font-size: smaller;
+}
+.nav-link{
+    padding-right:30px!important;
+}
+.login-signup a{
+    padding-right: 20px!important;
+}
+
+.col-style{
+    margin: 20px;
+    height: 400px;
+    background:rgb(192, 189, 189);
+    border: 1px solid rgb(187, 179, 179);
+    border-radius: 20px;
+    padding: 10px;
+}
+.product-img{
+    padding: 20px;
+}
+/* products css */
+.our-products{
+    display: flex !important;
+    justify-content: center !important;
+    padding-top: 80px;
+
+}
+.our-products h1{
+    font-weight: 800;
+    font-family: "Philosopher", 'sans-serif';
+    font-size: 70px;
+    text-transform: capitalize;
+}
+.product-area{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(/assest/product.jpg);
+    height: 50vh;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.product-btn{
+    border: 1px solid rgb(139, 172, 139);
+    border-radius: 30px;
+    margin-right:10px ;
+    background: rgb(145, 184, 145);
+    color: whitesmoke;
+}
+.product-btn1{
+    background: white;
+    border: 1px solid rgb(139, 172, 139);
+    border-radius: 30px;
+    color: rgb(93, 134, 93);
+    margin-right:10px ;
+}
+.product-btn:hover{
+    background: white;
+    color: rgb(93, 134, 93);
+    transition-duration: 2s;
+}
+.all-products{
+    background:rgb(93, 134, 93) ;
+    border-radius: 5px;
+    margin-top:40px ;
+}
+.page-link{
+    color: black;
+    margin-right: 15px;
+}
+.page-link:hover{
+    background: rgb(33, 129, 33);
+    color: whitesmoke;
+}
+.page-item:last-child .page-link {
+    border-radius: 20px !important;
+    width: 80px;
+    background: rgb(105, 185, 105);
+}
+.page-item:last-child .page-link:hover{
+    background: whitesmoke;
+    color: green;
+}
+.page-item:first-child .page-link{
+    border-radius: 20px !important;
+    background: rgb(110, 197, 110);
+
+
+}
+/* products css */
+
+/* about css */
+.about-area{
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assest/about.jpg);
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    color: white;
+    
+}
+.About-us h1{
+    font-weight: 700;
+    font-size: 70px;
+    font-family: "Philosopher", 'sans-serif';
+}
+.About-us p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 46px;
+    margin-top: 24px;
+}
+.customers-saying{
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,.2)), url(/assest/testimonial.jpg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 90px;
+}
+
+.customers-saying p{
+    color: rgb(104, 173, 104);
+    text-align: center;
+}
+.customers-saying h1{
+    color: rgb(174, 235, 104);
+    text-align: center;
+    font-weight: 600;
+    font-size: 50px;
+    font-family: "Philosopher", 'sans-serif';
+    text-transform: capitalize;
+}
+
+/* about css */
+
+/* contact-us  css*/
+.contact-area{
+    background: linear-gradient(rgba(63, 78, 92, 0.5),rgba(81, 65, 112, 0.5));
+    height: 60vh;
+}
+.get-in-touch h1{
+    font-weight: 600;
+    font-size: 30px;
+    font-family: "Philosopher", 'sans-serif';
+    text-transform: capitalize;
+}
+.submit-btn{
+    width: 150px;
+    height: 60px;
+    color: rgb(102, 160, 102);
+    background: white;
+    border: 0.5px solid black;
+    font-weight: 300;
+    font-size: 25px;
+
+}
+.icon-home{
+    font-size:  30px;
+    margin-right: 10px;
+    color: gray;
+}
+.loc{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.local-last{
+    margin-left: 55px;
+}
+/* contact css */
+
+
+/* login css */
+.sign-up{
+    background:linear-gradient(rgba(104, 52, 52, 0.6),rgba(0,0,0.5)),url('/assest//farmer.jpg');
+}
+/* login css */
+
+/* hide show for single page (all, vendor, category) */
+.hide{
+    display: none;
+
+}

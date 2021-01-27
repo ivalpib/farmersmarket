@@ -1,0 +1,89 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<header>
+<div class="product-area img-fluid ">
+    <div class="container">
+       {% include 'navbar.html' %}
+        <div class="container banner-part">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="our-products">
+                        <h1>Our Products</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+<section class="product-main latest-product ">
+    <div class="container ">
+        <div class="different-button">
+            <button type="button" class="btn-lg product-btn" onClick="location.href='/product'">All Products</button>
+            <button type="button" class="btn-lg product-btn1" onClick="location.href='/vendorproducts'">Filter by Vendors</button>
+            <button type="button" class="btn-lg product-btn" onClick="location.href='/productcategory'">Filter by category</button>
+        </div>
+        
+            {% for abc in vuser%}
+                <div class="row">
+                    <div class="all-products container">
+                        <h2>{{abc.name}}</h2>
+                    </div>
+                {% for vend in vproducts%}
+                    {% if abc.id != vend.vendor.id %}
+                    
+                    {% else %}       
+                        <div class="col-md-4  col-sm-6 col-lg-3 Product">
+                            <div class="col-style">
+                                <img src="{{vend.image.url}}" class="img-fluid product-img" alt="no img"><br>
+                            <h4>{{vend.name}}</h4>
+                            <h4>{{vend.vendor.name}}</h4>
+                            <p>{{vend.description}}</p>
+                            <div class="price-btn-parent">
+                                <div class="price">{{vend.price}}</div>
+                            <div class="btn">
+                                <button class="Add-btn">
+                                    <span class="product-card">ADD <i class="fas fa-shopping-cart"></i></span>
+                                </button>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+    </div>
+           <div class="container">
+               <div class="row">
+                <div class="pagination col-md-12 col-sm-12 col-lg-12 justify-content-center">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                        <li class="page-item prev-nxt-btn ">
+                            <a class="page-link " href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item " ><a class="page-link"  href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">6</a></li>
+                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                        <li class="page-item"><a class="page-link" href="#">8</a></li>
+                        <li class="page-item"><a class="page-link" href="#">9</a></li>
+                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                 
+                        <li class="page-item prev-nxt-btn">
+                            <a class="page-link " href="#">Next</a>
+                        </li>
+                        </ul>
+                    </nav>
+                </div>
+               </div>
+           </div>
+    </div>
+</section>
+
+
+{% endblock %}

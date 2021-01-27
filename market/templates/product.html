@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<header>
+<div class="product-area img-fluid ">
+    <div class="container">
+       {% include 'navbar.html' %}
+        <div class="container banner-part">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="our-products">
+                        <h1>Our Products</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+<section class="product-main latest-product ">
+    <div class="container ">
+        <div class="row">
+            <div class="different-button">
+                <button type="button" class="btn-lg product-btn1" onClick="location.href='/product'">All Products</button>
+                <button type="button" class="btn-lg product-btn"  onClick="location.href='/vendorproducts'">Filter by Vendors</button>
+                <button type="button" class="btn-lg product-btn" onClick="location.href='/productcategory'">Filter by category</button>
+            </div>
+            <div class="all-products container">
+                <h2>All products</h2>
+            </div>
+         </div>
+           <div class="container">
+               <div class="row">
+                {% for product in page_obj %}
+            <div class="col-md-4  col-sm-6 col-lg-3 Product">
+                <div class="col-style">
+                    <p>{{product.vendor.name}}</p>
+                    <img src="{{product.image.url}}" class="img-fluid product-img" alt="no img"><br>
+                <h4> {{product.name}}</h4>
+                <p>{{product.description}}</p>
+                <div class="price-btn-parent">
+                    {% if product.originalprice > product.price %}
+                    <div class="price"><strike>{{product.originalprice}}</strike></div>
+                    <div class="price">{{ product.price }}</div>    
+                    {% else %}
+                    <div class="price">{{ product.price }}</div>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <div class="btn">
+                        <button class="Add-btn add-to-cart" onclick=addToCart("{{product.id}}")>
+                            <span class="product-card">Add<i class="fas fa-shopping-cart"></i></span>
+                        </button>
+                    </div>
+                {% else %}
+                    <div class="btn">
+                        <a href="/login">
+                        <button class="Add-btn add-to-cart" onclick="">
+                            <span class="product-card">Add<i class="fas fa-shopping-cart"></i></span>
+                        </button>
+                       </a>
+                    </div>
+                {% endif %}
+                </div>
+                </div>
+            </div>
+            {% endfor %}
+
+                    <div class="pagination">
+                        <span class="step-links">
+                            {% if page_obj.has_previous %}
+                                <a href="?page=1">&laquo; first</a>
+                                <a href="?page={{ page_obj.previous_page_number }}">prev</a>
+                            {% endif %}
+
+                            <span class="current">
+                                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                            </span>
+
+                            {% if page_obj.has_next %}
+                                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                            {% endif %}
+                        </span>
+                    </div>
+               </div>
+           </div>
+    </div>
+</section>
+
+
+{% endblock %}

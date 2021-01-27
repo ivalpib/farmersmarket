@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+
+	<header>
+	<div class="product-area img-fluid ">
+	    <div class="container">
+	     {% include 'navbar.html' %}
+	        <div class="container banner-part">
+	            <div class="row">
+	                <div class="col-md-9">
+	                    <div class="our-products">
+	                        
+	                    </div>
+	                </div>
+	                <div class="col-md-3">
+	                	{% for message in messages%}
+                
+		                    <p class="text-danger"> {{message}} </p>
+
+		                    {% endfor %}	
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	</header>
+
+{% endblock %}
